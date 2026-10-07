@@ -32,22 +32,69 @@ function getColor(velocity) {
            v > 0  ? '#eab308' : '#22c55e';
 }
 
+// Ubah nama kolom tanggal (mis. "20170112" atau "d_20170112") ke tahun desimal
+function dateKeyToDecimalYear(k) {
+    const s = k.trim().replace(/^d_/i, '');
+    const y = parseInt(s.slice(0, 4), 10);
+    const m = parseInt(s.slice(4, 6), 10) - 1;
+    const d = parseInt(s.slice(6, 8), 10);
+    const t = Date.UTC(y, m, d);
+    const start = Date.UTC(y, 0, 1);
+    const end = Date.UTC(y + 1, 0, 1);
+    return y + (t - start) / (end - start);
+}
+
+// Regresi linear (least squares) + R²
+function linearRegression(points) {
+    const pts = points.filter(p => isFinite(p.x) && isFinite(p.y));
+    const n = pts.length;
+    if (n < 2) return null;
+
+    const sx  = pts.reduce((a, p) => a + p.x, 0);
+    const sy  = pts.reduce((a, p) => a + p.y, 0);
+    const sxx = pts.reduce((a, p) => a + p.x * p.x, 0);
+    const sxy = pts.reduce((a, p) => a + p.x * p.y, 0);
+
+    const denom = n * sxx - sx * sx;
+    if (denom === 0) return null;
+
+    const slope = (n * sxy - sx * sy) / denom;
+    const intercept = (sy - slope * sx) / n;
+
+    const meanY = sy / n;
+    const ssTot = pts.reduce((a, p) => a + (p.y - meanY) ** 2, 0);
+    const ssRes = pts.reduce((a, p) => a + (p.y - (slope * p.x + intercept)) ** 2, 0);
+    const r2 = ssTot === 0 ? 0 : 1 - ssRes / ssTot;
+
+    return { slope, intercept, r2 };
+}
+
+let rawCSVData = [];
+let pointIndex = [];
+let selectedMarker = null;
 // =========================================================
 // 2. INISIALISASI PETA & BASEMAP
 // =========================================================
 const map = L.map('map').setView([-7.7866348, 110.1791552], 12);
 
+// Buat custom pane untuk basemap agar posisinya selalu di bawah layer TIF
+map.createPane('basemapPane');
+map.getPane('basemapPane').style.zIndex = 200; // Default tilePane adalah 200
+
 const basemaps = {
     'carto-light': L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
         maxZoom: 19,
+        pane: 'basemapPane', // Tambahkan opsi pane di sini
         attribution: '&copy; OpenStreetMap contributors'
     }),
     'satellite': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         maxZoom: 19,
+        pane: 'basemapPane', // Tambahkan opsi pane di sini
         attribution: 'Tiles &copy; Esri'
     }),
     'osm': L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
+        pane: 'basemapPane', // Tambahkan opsi pane di sini
         attribution: '&copy; OpenStreetMap contributors'
     })
 };
@@ -63,10 +110,6 @@ if (basemapSelect) {
         }
     });
 }
-
-// Variabel global
-let rawCSVData = [];
-let markerLayerGroup = L.layerGroup();
 
 // =========================================================
 // 3. GRAFIK 1 (LINE CHART)
@@ -104,7 +147,7 @@ if (ctx1) {
 }
 
 // =========================================================
-// 4. GRAFIK 2 (SCATTER PLOT)
+// 4. GRAFIK 2 (SCATTER PLOT + REGRESI LINEAR)
 // =========================================================
 const ctx2 = document.getElementById('scatterChart')?.getContext('2d');
 let scatterChart = null;
@@ -113,27 +156,41 @@ if (ctx2) {
     scatterChart = new Chart(ctx2, {
         type: 'scatter',
         data: {
-            datasets: [{
-                label: 'LOS displacement [cm]',
-                data: [],
-                backgroundColor: '#0891b2',
-                borderColor: '#0e7490',
-                pointRadius: 3,
-                showLine: false
-            }]
+            datasets: [
+                {
+                    label: 'LOS displacement [mm]',
+                    data: [],
+                    backgroundColor: '#0891b2',
+                    borderColor: '#0e7490',
+                    pointRadius: 3,
+                    showLine: false
+                },
+                {
+                    label: 'Regresi linear',
+                    data: [],
+                    type: 'line',
+                    borderColor: '#ef4444',
+                    borderWidth: 2,
+                    pointRadius: 0,
+                    fill: false
+                }
+            ]
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
-            plugins: { legend: { display: false } },
+            plugins: {
+                legend: { display: true, position: 'top', labels: { boxWidth: 12, font: { size: 10 } } }
+            },
             scales: {
                 x: {
                     type: 'linear',
-                    title: { display: true, text: 'Akuisisi Waktu (Index)' },
-                    grid: { display: true, color: '#f3f4f6' }
+                    title: { display: true, text: 'Tahun' },
+                    grid: { display: true, color: '#f3f4f6' },
+                    ticks: { callback: v => Number(v).toFixed(1) }
                 },
                 y: {
-                    title: { display: true, text: 'LOS displacement [cm]' },
+                    title: { display: true, text: 'LOS displacement [mm]' },
                     grid: { display: true, color: '#e5e7eb' }
                 }
             }
@@ -168,11 +225,12 @@ function updateDashboardSelection(row) {
     if (elemVelocity) elemVelocity.innerText = `${velocityVal} mm/tahun`;
     if (elemCoords) elemCoords.innerText = `${lat}, ${lng}`;
 
-    // Kolom time series: "d_20170103", "d_2016", atau "20170103"
+    // Kolom time series: "d_20170103" atau "20170103"
     const timeKeys = Object.keys(row)
-        .filter(k => /^d_/i.test(k.trim()) || /^\d{8}$/.test(k.trim()))
+        .filter(k => /^d_\d{8}$/i.test(k.trim()) || /^\d{8}$/.test(k.trim()))
         .sort();
 
+    // Grafik 1: line chart
     if (timeSeriesChart) {
         timeSeriesChart.data.labels = timeKeys.map(k => k.trim().replace(/^d_/i, ''));
         timeSeriesChart.data.datasets[0].data = timeKeys.map(k => parseInSARValue(row[k]));
@@ -180,21 +238,43 @@ function updateDashboardSelection(row) {
         timeSeriesChart.update();
     }
 
+    // Grafik 2: scatter + regresi
     if (scatterChart) {
-        scatterChart.data.datasets[0].data = timeKeys.map((key, index) => ({
-            x: index + 1,
-            y: parseInSARValue(row[key])
-        }));
+        const scatterPoints = timeKeys
+            .filter(k => {
+                const raw = row[k];
+                return raw !== undefined && raw !== null && String(raw).trim() !== '';
+            })
+            .map(k => ({
+                x: dateKeyToDecimalYear(k),
+                y: parseInSARValue(row[k])
+            }));
+
+        scatterChart.data.datasets[0].data = scatterPoints;
+
+        const reg = linearRegression(scatterPoints);
+        if (reg) {
+            const xs = scatterPoints.map(p => p.x);
+            const x0 = Math.min(...xs);
+            const x1 = Math.max(...xs);
+            scatterChart.data.datasets[1].data = [
+                { x: x0, y: reg.slope * x0 + reg.intercept },
+                { x: x1, y: reg.slope * x1 + reg.intercept }
+            ];
+            scatterChart.data.datasets[1].label =
+                `Regresi: ${reg.slope.toFixed(2)} mm/thn (R² = ${reg.r2.toFixed(2)})`;
+        } else {
+            scatterChart.data.datasets[1].data = [];
+            scatterChart.data.datasets[1].label = 'Regresi linear';
+        }
+
         scatterChart.update();
     }
 }
 
 // =========================================================
-// 6. RENDER MARKER DI PETA
+// 6. INDEX TITIK (TIDAK DIGAMBAR, HANYA UNTUK KLIK)
 // =========================================================
-let pointIndex = [];          // daftar titik untuk pencarian terdekat
-let selectedMarker = null;    // penanda kecil titik yang dipilih
-
 function renderDashboardData(data) {
     const totalPointsElem = document.getElementById('total-points');
     const avgVelocityElem = document.getElementById('avg-velocity');
@@ -205,7 +285,6 @@ function renderDashboardData(data) {
         avgVelocityElem.innerText = `${avgVel.toFixed(1)} mm/thn`;
     }
 
-    // Tidak ada marker yang digambar, hanya index data untuk klik
     pointIndex = [];
     const bounds = L.latLngBounds();
 
@@ -222,9 +301,8 @@ function renderDashboardData(data) {
 }
 
 // =========================================================
-// 7. SORTING
+// 7. KLIK PETA -> CARI TITIK TERDEKAT
 // =========================================================
-
 const MAX_CLICK_DIST_PX = 25;   // jarak maksimum klik ke titik terdekat (piksel layar)
 
 map.on('click', function (e) {
@@ -241,7 +319,7 @@ map.on('click', function (e) {
 
     if (!best || bestDist > MAX_CLICK_DIST_PX) return;   // klik di luar area data
 
-    // Penanda kecil sementara supaya terlihat titik mana yang dipilih
+    // Penanda sementara supaya terlihat titik mana yang dipilih
     if (selectedMarker) map.removeLayer(selectedMarker);
     selectedMarker = L.circleMarker([best.lat, best.lng], {
         radius: 6, color: '#000', weight: 2, fillOpacity: 0, interactive: false
@@ -249,6 +327,7 @@ map.on('click', function (e) {
 
     updateDashboardSelection(best.row);
 });
+
 // =========================================================
 // 8. SORTING
 // =========================================================
@@ -276,14 +355,13 @@ if (sortSelect) {
 // =========================================================
 // 9. BACA CSV DENGAN PAPAPARSE
 // =========================================================
-Papa.parse('data/asc_timeseries.csv', {
+Papa.parse('data/dsc_timeseries.csv', {
     download: true,
     header: true,
     skipEmptyLines: true,
     complete: function (results) {
         rawCSVData = results.data;
 
-        // Debug: lihat struktur CSV di Console (F12)
         console.log('Jumlah baris:', rawCSVData.length);
         if (rawCSVData.length > 0) {
             console.log('Nama kolom:', Object.keys(rawCSVData[0]));
@@ -296,6 +374,7 @@ Papa.parse('data/asc_timeseries.csv', {
 
         renderDashboardData(displayData);
 
+        // Hapus blok ini kalau tidak ingin panel terbuka otomatis saat halaman dimuat
         if (displayData.length > 0) {
             updateDashboardSelection(displayData[0]);
         }
@@ -329,29 +408,144 @@ if (toggleControlBtn && controlBody) {
     });
 }
 
-fetch('data/UD.tif')
-    .then(r => r.arrayBuffer())
+
+// =========================================================
+// 11. LAYER RASTER TIF VELOCITY
+// =========================================================
+const COLOR_STOPS = [
+    [-10,   [185, 28, 28]],   // turun cepat: merah tua
+    [ -7,   [239, 68, 68]],   // merah
+    [ -4,   [249, 115, 22]],  // oranye
+    [ -1.5, [234, 179, 8]],   // kuning
+    [  0,   [34, 197, 94]],   // hijau (stabil)
+    [  3,   [59, 130, 246]]   // biru (naik)
+];
+
+function velocityToColor(v) {
+    if (v <= COLOR_STOPS[0][0]) return `rgb(${COLOR_STOPS[0][1].join(',')})`;
+    const last = COLOR_STOPS[COLOR_STOPS.length - 1];
+    if (v >= last[0]) return `rgb(${last[1].join(',')})`;
+
+    for (let i = 0; i < COLOR_STOPS.length - 1; i++) {
+        const [v0, c0] = COLOR_STOPS[i];
+        const [v1, c1] = COLOR_STOPS[i + 1];
+        if (v >= v0 && v <= v1) {
+            const t = (v - v0) / (v1 - v0);
+            const rgb = c0.map((c, k) => Math.round(c + (c1[k] - c) * t));
+            return `rgb(${rgb.join(',')})`;
+        }
+    }
+    return null;
+}
+
+// Buat custom pane khusus untuk TIF dengan zIndex di atas basemap (zIndex 200)
+if (!map.getPane('tifPane')) {
+    map.createPane('tifPane');
+    map.getPane('tifPane').style.zIndex = 300;
+}
+
+fetch('data/vel.tif')
+    .then(r => {
+        if (!r.ok) throw new Error('TIF tidak ditemukan: HTTP ' + r.status);
+        return r.arrayBuffer();
+    })
     .then(buf => parseGeoraster(buf))
     .then(georaster => {
-        const min = georaster.mins[0], max = georaster.maxs[0];
-        const absMax = Math.max(Math.abs(min), Math.abs(max));
+        console.log('Georaster:', {
+            projection: georaster.projection,
+            size: [georaster.width, georaster.height],
+            bounds: [georaster.xmin, georaster.ymin, georaster.xmax, georaster.ymax],
+            nodata: georaster.noDataValue,
+            min: georaster.mins[0],
+            max: georaster.maxs[0]
+        });
 
         const tifLayer = new GeoRasterLayer({
             georaster,
             opacity: 0.7,
             resolution: 256,
+            pane: 'tifPane', // <-- Menyimpan layer TIF di pane khusus zIndex 300
             pixelValuesToColorFn: values => {
                 const v = values[0];
-                if (v === null || isNaN(v) || v === georaster.noDataValue) return null;
-                const t = (v + absMax) / (2 * absMax);          // 0..1
-                // biru (turun) - putih - merah (naik); balik jika perlu
-                const r = Math.round(255 * Math.min(1, t * 2));
-                const b = Math.round(255 * Math.min(1, (1 - t) * 2));
-                const g = Math.round(255 * (1 - Math.abs(t - 0.5) * 2));
-                return `rgb(${r},${g},${b})`;
+                if (v === undefined || v === null || !isFinite(v)) return null;
+                if (georaster.noDataValue !== undefined && v === georaster.noDataValue) return null;
+                return velocityToColor(v);
             }
         });
+
         tifLayer.addTo(map);
-        tifLayer.bringToBack();
+        tifLayer.getContainer?.()?.style && (tifLayer.getContainer().style.pointerEvents = 'none');
+map.getPane('tifPane').style.pointerEvents = 'none';
+        console.log('TIF layer ditambahkan pada tifPane');
     })
     .catch(err => console.error('Gagal memuat TIF:', err));
+
+
+// =========================================================
+// 12. LAYER BATAS DESA (GEOJSON)
+// =========================================================
+const desaStyle = {
+    color: '#1e293b',
+    weight: 1.2,
+    fillOpacity: 0          // tanpa isi, supaya raster tetap terlihat
+};
+
+fetch('data/admin_desa.geojson')
+    .then(r => {
+        if (!r.ok) throw new Error('GeoJSON tidak ditemukan: HTTP ' + r.status);
+        return r.json();
+    })
+    .then(geojson => {
+        const desaLayer = L.geoJSON(geojson, {
+            style: desaStyle,
+            interactive: false, // <-- MATIKAN INTERAKSI DI SINI
+            /*
+               Catatan: Efek hover (desaHover) dan Tooltip tidak akan berjalan 
+               karena interaksi pointer sudah dimatikan total.
+            */
+        }).addTo(map);
+
+        console.log('Batas desa ditambahkan:', geojson.features.length, 'fitur');
+        console.log('Atribut contoh:', geojson.features[0]?.properties);
+    })
+    .catch(err => console.error('Gagal memuat GeoJSON:', err));
+
+// =========================================================
+// EVENT LISTENER ZOOM KECAMATAN (TANPA FILTER)
+// =========================================================
+const kecamatanSelect = document.getElementById('kecamatan-select');
+console.log('kecamatan-select ditemukan?', !!kecamatanSelect);
+
+const normKec = s => (s || '').toString().toLowerCase()
+    .replace(/\(.*?\)/g, '')
+    .replace(/^kecamatan\s+/, '')
+    .replace(/[^a-z0-9]/g, '');
+
+if (kecamatanSelect) {
+    kecamatanSelect.addEventListener('change', (e) => {
+        const selectedKec = e.target.value;
+        const isAll = !selectedKec || selectedKec === 'all' || selectedKec === 'Semua Kecamatan';
+        const target = normKec(selectedKec);
+
+        const bounds = L.latLngBounds();
+        let n = 0;
+        rawCSVData.forEach(row => {
+            if (!isAll && normKec(getField(row, ['kecamatan'])) !== target) return;
+            const lat = getLat(row), lng = getLng(row);
+            if (isFinite(lat) && isFinite(lng) && (lat !== 0 || lng !== 0)) {
+                bounds.extend([lat, lng]);
+                n++;
+            }
+        });
+
+        console.log('Dipilih:', JSON.stringify(selectedKec), '| titik cocok:', n);
+        if (n === 0) {
+            console.log('Contoh nilai kecamatan di CSV:',
+                [...new Set(rawCSVData.map(r => getField(r, ['kecamatan'])))].slice(0, 15));
+        }
+
+        if (bounds.isValid()) {
+            map.fitBounds(bounds, { padding: [50, 50], maxZoom: 15 });
+        }
+    });
+}
