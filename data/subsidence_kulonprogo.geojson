@@ -1,0 +1,7005 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96442413330078,
+          0.24786102771759033
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0001",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96442413330078,
+          0.24062420427799225
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0002",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.2406226545572281
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0003",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.2406221330165863
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0004",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.2333853840827942
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0005",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.22615009546279907
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0006",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.22614960372447968
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0007",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.21891282498836517
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0008",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.21891137957572937
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0009",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.94824981689453,
+          0.2641451060771942
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0010",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96083068847656,
+          0.2532888948917389
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0011",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.2514795660972595
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0012",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96442413330078,
+          0.24967023730278015
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0013",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96082305908203,
+          0.24786129593849182
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0014",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.24786116182804108
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0015",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96442413330078,
+          0.24786102771759033
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0016",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.2478608936071396
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0017",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.2478603720664978
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0018",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.24786023795604706
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0019",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.2478601038455963
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0020",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.95903015136719,
+          0.24605222046375275
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0021",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96082305908203,
+          0.246052086353302
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0022",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.24605195224285126
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0023",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.24605168402194977
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0024",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.24605129659175873
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0025",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.24605116248130798
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0026",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.24605102837085724
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0027",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.2460508942604065
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0028",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.24605077505111694
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0029",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.95903015136719,
+          0.24424301087856293
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0030",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.24424248933792114
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0031",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.24424196779727936
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0032",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.2442418336868286
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0033",
+        "kecamatan": "Kulon Progo",
+        "velocity": 5.0,
+        "d_2016": 0,
+        "d_2018": 8.0,
+        "d_2020": 18.0,
+        "d_2022": 30.0,
+        "d_2024": 44.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.24424169957637787
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0034",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.24424156546592712
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0035",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96082305908203,
+          0.24243366718292236
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0036",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.2424335479736328
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0037",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.24243316054344177
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0038",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.24243223667144775
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0039",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96082305908203,
+          0.24062445759773254
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0040",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.240624338388443
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0041",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96442413330078,
+          0.24062420427799225
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0042",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.2406240850687027
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0043",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.24062395095825195
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0044",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98239135742188,
+          0.24062292277812958
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0045",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98419189453125,
+          0.24062278866767883
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0046",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.2406226545572281
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0047",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.2406221330165863
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0048",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.23881512880325317
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0049",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96441650390625,
+          0.23881500959396362
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0050",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.23881487548351288
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0051",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.23881475627422333
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0052",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98239135742188,
+          0.23881372809410095
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0053",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98419189453125,
+          0.2388135939836502
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0054",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.23881345987319946
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0055",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.2388133406639099
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0056",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96441650390625,
+          0.2370058000087738
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0057",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.23700568079948425
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0058",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.2370055466890335
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0059",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.2370041459798813
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0060",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.23700401186943054
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0061",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.23519647121429443
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0062",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.23519635200500488
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0063",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.23519621789455414
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0064",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.23519495129585266
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0065",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.23519481718540192
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0066",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.23519469797611237
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0067",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.23338726162910461
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0068",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.23338714241981506
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0069",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.2333870232105255
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0070",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.23338651657104492
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0071",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.23338626325130463
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0072",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.23338563740253448
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0073",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.23338550329208374
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0074",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.2333853840827942
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0075",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.23338524997234344
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0076",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.2333851158618927
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0077",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.23157794773578644
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0078",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.2315778136253357
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0079",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.23157769441604614
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0080",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.23157744109630585
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0081",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.23157718777656555
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0082",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.2315765619277954
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0083",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.23157644271850586
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0084",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.23157630860805511
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0085",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.23157618939876556
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0086",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.23157605528831482
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0087",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.23157593607902527
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0088",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.22976873815059662
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0089",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.22976861894130707
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0090",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.22976849973201752
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0091",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.22976836562156677
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0092",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.22976824641227722
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0093",
+        "kecamatan": "Kulon Progo",
+        "velocity": 7.0,
+        "d_2016": 0,
+        "d_2018": 11.2,
+        "d_2020": 25.2,
+        "d_2022": 42.0,
+        "d_2024": 61.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.22976812720298767
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0094",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.22976799309253693
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0095",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.22976787388324738
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0096",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.22976738214492798
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0097",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.22976724803447723
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0098",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.22976712882518768
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0099",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.22976699471473694
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0100",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.2297668755054474
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0101",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.22976674139499664
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0102",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.22795940935611725
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0103",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.2279592901468277
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0104",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.22795917093753815
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0105",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.2279590517282486
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0106",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.22795891761779785
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0107",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.2279587984085083
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0108",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.22795867919921875
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0109",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98239135742188,
+          0.2279585599899292
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0110",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98418426513672,
+          0.22795842587947845
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0111",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.2279583066701889
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0112",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.22795818746089935
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0113",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.22795793414115906
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0114",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.22795744240283966
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0115",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.22615021467208862
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0116",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.22615009546279907
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0117",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.22614997625350952
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0118",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.22614984214305878
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0119",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.22614972293376923
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0120",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.22614960372447968
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0121",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.22614948451519012
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0122",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98239135742188,
+          0.22614936530590057
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0123",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98418426513672,
+          0.22614923119544983
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0124",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.22614824771881104
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0125",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.2243407666683197
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0126",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.22434064745903015
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0127",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.2243405282497406
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0128",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.22434040904045105
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0129",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.2243402898311615
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0130",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.2243390679359436
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0131",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.22253157198429108
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0132",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.22253145277500153
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0133",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.22253133356571198
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0134",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.22253121435642242
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0135",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.22253109514713287
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0136",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.22252975404262543
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0137",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.22072213888168335
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0138",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.2207220196723938
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0139",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.22072069346904755
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0140",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.220720574259758
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0141",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.21891282498836517
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0142",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.21891163289546967
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0143",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.21891151368618011
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0144",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.21891137957572937
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0145",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00215911865234,
+          0.21891126036643982
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0146",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.21710361540317535
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0147",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.21710315346717834
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0148",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98777770996094,
+          0.2171030342578888
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0149",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.21710291504859924
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0150",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.21710267663002014
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0151",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.2171025574207306
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0152",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.21710243821144104
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0153",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.2171023190021515
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0154",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.21710219979286194
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0155",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00215911865234,
+          0.2171020805835724
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0156",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.21529395878314972
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0157",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98777770996094,
+          0.21529383957386017
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0158",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.21529372036457062
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0159",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.21529360115528107
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0160",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.21529348194599152
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0161",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.21529337763786316
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0162",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.2152932584285736
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0163",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.21529313921928406
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0164",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.2152930200099945
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0165",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.2134847640991211
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0166",
+        "kecamatan": "Kulon Progo",
+        "velocity": 7.0,
+        "d_2016": 0,
+        "d_2018": 11.2,
+        "d_2020": 25.2,
+        "d_2022": 42.0,
+        "d_2024": 61.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98777770996094,
+          0.21348464488983154
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0167",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.21348454058170319
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0168",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.21348442137241364
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0169",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.21348430216312408
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0170",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.21348418295383453
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0171",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.21348406374454498
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0172",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.21348394453525543
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0173",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.21348382532596588
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0174",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.2116749882698059
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0175",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96442413330078,
+          0.24786102771759033
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0176",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96442413330078,
+          0.24062420427799225
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0177",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.2406226545572281
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0178",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.2406221330165863
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0179",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.2333853840827942
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0180",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.22615009546279907
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0181",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.22614960372447968
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0182",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.21891282498836517
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0183",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.21891137957572937
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0184",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.94824981689453,
+          0.2641451060771942
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0185",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96083068847656,
+          0.2532888948917389
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0186",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.2514795660972595
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0187",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96442413330078,
+          0.24967023730278015
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0188",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96082305908203,
+          0.24786129593849182
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0189",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.24786116182804108
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0190",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96442413330078,
+          0.24786102771759033
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0191",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.2478608936071396
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0192",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.2478603720664978
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0193",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.24786023795604706
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0194",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.2478601038455963
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0195",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.95903015136719,
+          0.24605222046375275
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0196",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96082305908203,
+          0.246052086353302
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0197",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.24605195224285126
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0198",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.24605168402194977
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0199",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.24605129659175873
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0200",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.24605116248130798
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0201",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.24605102837085724
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0202",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.2460508942604065
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0203",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.24605077505111694
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0204",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.95903015136719,
+          0.24424301087856293
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0205",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.24424248933792114
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0206",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.24424196779727936
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0207",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.2442418336868286
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0208",
+        "kecamatan": "Kulon Progo",
+        "velocity": 5.0,
+        "d_2016": 0,
+        "d_2018": 8.0,
+        "d_2020": 18.0,
+        "d_2022": 30.0,
+        "d_2024": 44.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.24424169957637787
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0209",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.24424156546592712
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0210",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96082305908203,
+          0.24243366718292236
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0211",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.2424335479736328
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0212",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.24243316054344177
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0213",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.24243223667144775
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0214",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96082305908203,
+          0.24062445759773254
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0215",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.240624338388443
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0216",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96442413330078,
+          0.24062420427799225
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0217",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.2406240850687027
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0218",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.24062395095825195
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0219",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98239135742188,
+          0.24062292277812958
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0220",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98419189453125,
+          0.24062278866767883
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0221",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.2406226545572281
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0222",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.2406221330165863
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0223",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9626235961914,
+          0.23881512880325317
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0224",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96441650390625,
+          0.23881500959396362
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0225",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.23881487548351288
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0226",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.23881475627422333
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0227",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98239135742188,
+          0.23881372809410095
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0228",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98419189453125,
+          0.2388135939836502
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0229",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.23881345987319946
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0230",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.2388133406639099
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0231",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96441650390625,
+          0.2370058000087738
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0232",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.23700568079948425
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0233",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.2370055466890335
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0234",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.2370041459798813
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0235",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.23700401186943054
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0236",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.23519647121429443
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0237",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.23519635200500488
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0238",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.23519621789455414
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0239",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.23519495129585266
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0240",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.23519481718540192
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0241",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.23519469797611237
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0242",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96621704101562,
+          0.23338726162910461
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0243",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.23338714241981506
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0244",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.2333870232105255
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0245",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.23338651657104492
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0246",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.23338626325130463
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0247",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.23338563740253448
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0248",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.23338550329208374
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0249",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.2333853840827942
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0250",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.23338524997234344
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0251",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.2333851158618927
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0252",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.23157794773578644
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0253",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.2315778136253357
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0254",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.23157769441604614
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0255",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.23157744109630585
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0256",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.23157718777656555
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0257",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.2315765619277954
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0258",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.23157644271850586
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0259",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.23157630860805511
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0260",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.23157618939876556
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0261",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.23157605528831482
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0262",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.23157593607902527
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0263",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.968017578125,
+          0.22976873815059662
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0264",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.22976861894130707
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0265",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.22976849973201752
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0266",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.22976836562156677
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0267",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.22976824641227722
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0268",
+        "kecamatan": "Kulon Progo",
+        "velocity": 7.0,
+        "d_2016": 0,
+        "d_2018": 11.2,
+        "d_2020": 25.2,
+        "d_2022": 42.0,
+        "d_2024": 61.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.22976812720298767
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0269",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.22976799309253693
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0270",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.22976787388324738
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0271",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.22976738214492798
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0272",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.22976724803447723
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0273",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.22976712882518768
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0274",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.22976699471473694
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0275",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.2297668755054474
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0276",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.22976674139499664
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0277",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.22795940935611725
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0278",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.2279592901468277
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0279",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.22795917093753815
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0280",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.2279590517282486
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0281",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.22795891761779785
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0282",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.2279587984085083
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0283",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.22795867919921875
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0284",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98239135742188,
+          0.2279585599899292
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0285",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98418426513672,
+          0.22795842587947845
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0286",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.2279583066701889
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0287",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98778533935547,
+          0.22795818746089935
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0288",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.22795793414115906
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0289",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.22795744240283966
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0290",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.96981048583984,
+          0.22615021467208862
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0291",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97161102294922,
+          0.22615009546279907
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0292",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.22614997625350952
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0293",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.22614984214305878
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0294",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.22614972293376923
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0295",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.22614960372447968
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0296",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.22614948451519012
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0297",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98239135742188,
+          0.22614936530590057
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0298",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98418426513672,
+          0.22614923119544983
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0299",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.22614824771881104
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0300",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.2243407666683197
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0301",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.22434064745903015
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0302",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.2243405282497406
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0303",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.22434040904045105
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0304",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.2243402898311615
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0305",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.2243390679359436
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0306",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97340393066406,
+          0.22253157198429108
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0307",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97520446777344,
+          0.22253145277500153
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0308",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.22253133356571198
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0309",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.22253121435642242
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0310",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9805908203125,
+          0.22253109514713287
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0311",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.22252975404262543
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0312",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97699737548828,
+          0.22072213888168335
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0313",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.2207220196723938
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0314",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.22072069346904755
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0315",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.220720574259758
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0316",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.21891282498836517
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0317",
+        "kecamatan": "Kulon Progo",
+        "velocity": 9.0,
+        "d_2016": 0,
+        "d_2018": 14.4,
+        "d_2020": 32.4,
+        "d_2022": 54.0,
+        "d_2024": 79.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.21891163289546967
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0318",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.21891151368618011
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0319",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.21891137957572937
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0320",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00215911865234,
+          0.21891126036643982
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0321",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.97879791259766,
+          0.21710361540317535
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0322",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.21710315346717834
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0323",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98777770996094,
+          0.2171030342578888
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0324",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.21710291504859924
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0325",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.21710267663002014
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0326",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.2171025574207306
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0327",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.21710243821144104
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0328",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.2171023190021515
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0329",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.21710219979286194
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0330",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00215911865234,
+          0.2171020805835724
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0331",
+        "kecamatan": "Kulon Progo",
+        "velocity": 8.0,
+        "d_2016": 0,
+        "d_2018": 12.8,
+        "d_2020": 28.8,
+        "d_2022": 48.0,
+        "d_2024": 70.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.21529395878314972
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0332",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98777770996094,
+          0.21529383957386017
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0333",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.21529372036457062
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0334",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.21529360115528107
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0335",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.21529348194599152
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0336",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.21529337763786316
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0337",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.2152932584285736
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0338",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.0,
+        "d_2016": 0,
+        "d_2018": 0.0,
+        "d_2020": 0.0,
+        "d_2022": 0.0,
+        "d_2024": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.21529313921928406
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0339",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.2152930200099945
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0340",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9859848022461,
+          0.2134847640991211
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0341",
+        "kecamatan": "Kulon Progo",
+        "velocity": 7.0,
+        "d_2016": 0,
+        "d_2018": 11.2,
+        "d_2020": 25.2,
+        "d_2022": 42.0,
+        "d_2024": 61.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98777770996094,
+          0.21348464488983154
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0342",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.98957824707031,
+          0.21348454058170319
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0343",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99137878417969,
+          0.21348442137241364
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0344",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99317169189453,
+          0.21348430216312408
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0345",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.21348418295383453
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0346",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99676513671875,
+          0.21348406374454498
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0347",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.99856567382812,
+          0.21348394453525543
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0348",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.00035858154297,
+          0.21348382532596588
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0349",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9949722290039,
+          0.2116749882698059
+        ]
+      },
+      "properties": {
+        "point_id": "PS-0350",
+        "kecamatan": "Kulon Progo",
+        "velocity": 0.5,
+        "d_2016": 0,
+        "d_2018": 0.8,
+        "d_2020": 1.8,
+        "d_2022": 3.0,
+        "d_2024": 4.4
+      }
+    }
+  ]
+}

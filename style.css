@@ -1,0 +1,326 @@
+:root {
+    --bg-main: #f3f7f4;
+    --sidebar-bg: #edf4ee;
+    --card-bg: #ffffff;
+    --primary-green: #2e6f40;
+    --primary-soft: #e2efe4;
+    --accent-green: #1b4332;
+    --border-color: #d1e2d4;
+    --text-dark: #1c2d21;
+    --text-muted: #5c7063;
+    --danger-red: #d93838;
+    --shadow-soft: 0 4px 20px rgba(46, 111, 64, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--bg-main);
+}
+
+#app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* --- SIDEBAR DESIGN --- */
+#sidebar {
+    width: 380px;
+    background: linear-gradient(180deg, #f0f6f1 0%, #e5efe7 100%);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    gap: 14px;
+    z-index: 1000;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.03);
+    overflow-y: auto;
+}
+
+#sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+#sidebar::-webkit-scrollbar-thumb {
+    background-color: #c0d6c4;
+    border-radius: 10px;
+}
+
+/* Brand Section */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.brand-icon {
+    font-size: 1.5rem;
+    background: var(--primary-soft);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.brand h2 {
+    font-size: 1.15rem;
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
+.brand p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Base Card Box */
+.card-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: var(--shadow-soft);
+}
+
+.section-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+}
+
+/* KPI Cards */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.metric-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+.metric-card .label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.metric-card .value {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent-green);
+    margin-top: 4px;
+    display: block;
+}
+
+.metric-card.alert .value {
+    color: var(--danger-red);
+}
+
+/* Panel Mitigasi Bencana */
+.mitigation-panel {
+    border-left: 4px solid var(--primary-green);
+}
+
+.mitigation-status {
+    margin-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.badge-normal {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.badge-warning {
+    background-color: #fef9c3;
+    color: #a16207;
+}
+
+.badge-danger {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.mitigation-panel p {
+    font-size: 0.78rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.mitigation-steps {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    border-top: 1px dashed var(--border-color);
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+.mitigation-steps ul {
+    padding-left: 16px;
+    margin-top: 4px;
+}
+
+.mitigation-steps li {
+    margin-bottom: 3px;
+}
+
+.chart-subtitle {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+.chart-wrapper {
+    position: relative;
+    height: 220px; /* Batas tinggi ideal grafik di sidebar */
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* --- MAP AREA & FLOATING CONTROLS --- */
+#map-container {
+    flex: 1;
+    height: 100vh;
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    background-color: #e3eae5;
+}
+
+/* Floating Control Panel Widget (Pojok Kanan Atas) */
+.floating-widget {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    width: 260px;
+    overflow: hidden;
+}
+
+.widget-header {
+    background: var(--primary-soft);
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--accent-green);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.widget-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--primary-green);
+    line-height: 1;
+}
+
+.widget-body {
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.widget-body.collapsed {
+    display: none;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-group select {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    font-size: 0.8rem;
+    background-color: #fcfdfe;
+    color: var(--text-dark);
+}
+
+.form-group select:focus {
+    border-color: var(--primary-green);
+}
+
+/* Floating Info Card Overlay (Pojok Kanan Bawah) */
+#floating-card {
+    position: absolute;
+    bottom: 24px;
+    right: 20px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    width: 280px;
+    border: 1px solid var(--border-color);
+}
+
+#floating-card.hidden {
+    display: none;
+}
+
+#close-card {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 6px;
+    color: var(--text-dark);
+}
+
+.highlight {
+    color: var(--danger-red);
+}
