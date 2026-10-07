@@ -1,27 +1,41 @@
 // =========================================================
-// 1. HELPER: CONVERT DESIMAL DENGAN KOMA (DESIMAL INDONESIA)
+// 1. HELPER
 // =========================================================
 function parseInSARValue(val) {
     if (val === null || val === undefined) return 0;
     if (typeof val === 'number') return val;
-    const cleaned = val.toString().replace(',', '.');
+    const cleaned = val.toString().trim().replace(',', '.');
     const parsed = parseFloat(cleaned);
     return isNaN(parsed) ? 0 : parsed;
 }
 
+// Ambil nilai kolom tanpa peduli huruf besar/kecil dan spasi
+function getField(row, names) {
+    const keys = Object.keys(row);
+    for (const n of names) {
+        const k = keys.find(key => key.trim().toLowerCase() === n);
+        if (k !== undefined) return row[k];
+    }
+    return undefined;
+}
+
+const getLat = row => parseInSARValue(getField(row, ['latitude', 'lat', 'y']));
+const getLng = row => parseInSARValue(getField(row, ['longitude', 'lon', 'lng', 'long', 'x']));
+const getVel = row => parseInSARValue(getField(row, ['velocity', 'vel', 'v']));
+
 // Warna Marker berdasarkan Kecepatan (Velocity)
 function getColor(velocity) {
     const v = parseInSARValue(velocity);
-    return v > 10  ? '#b91c1c' :
-           v > 5   ? '#ef4444' :
-           v > 1   ? '#f97316' :
-           v > 0   ? '#eab308' : '#22c55e';
+    return v > 10 ? '#b91c1c' :
+           v > 5  ? '#ef4444' :
+           v > 1  ? '#f97316' :
+           v > 0  ? '#eab308' : '#22c55e';
 }
 
 // =========================================================
 // 2. INISIALISASI PETA & BASEMAP
 // =========================================================
-const map = L.map('map').setView([0.7893, 113.9213], 5);
+const map = L.map('map').setView([-7.7866348, 110.1791552], 12);
 
 const basemaps = {
     'carto-light': L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
@@ -50,12 +64,12 @@ if (basemapSelect) {
     });
 }
 
-// Variable Global Layer
-let realGeoJSONData = null;
-let geojsonLayer = null;
+// Variabel global
+let rawCSVData = [];
+let markerLayerGroup = L.layerGroup();
 
 // =========================================================
-// 3. INISIALISASI GRAFIK 1 (LINE CHART)
+// 3. GRAFIK 1 (LINE CHART)
 // =========================================================
 const ctx1 = document.getElementById('timeSeriesChart')?.getContext('2d');
 let timeSeriesChart = null;
@@ -64,16 +78,16 @@ if (ctx1) {
     timeSeriesChart = new Chart(ctx1, {
         type: 'line',
         data: {
-            labels: ['2016', '2018', '2020', '2022', '2024'],
+            labels: [],
             datasets: [{
                 label: 'Deformasi (mm)',
-                data: [0, 0, 0, 0, 0],
+                data: [],
                 borderColor: '#ef4444',
                 backgroundColor: 'rgba(239, 68, 68, 0.15)',
                 borderWidth: 2,
                 fill: true,
                 tension: 0.2,
-                pointRadius: 4,
+                pointRadius: 3,
                 pointBackgroundColor: '#ef4444'
             }]
         },
@@ -82,7 +96,7 @@ if (ctx1) {
             maintainAspectRatio: false,
             plugins: { legend: { display: true, position: 'top' } },
             scales: {
-                x: { title: { display: true, text: 'Tahun' } },
+                x: { title: { display: true, text: 'Tanggal' } },
                 y: { title: { display: true, text: 'Displacement (mm)' } }
             }
         }
@@ -90,7 +104,7 @@ if (ctx1) {
 }
 
 // =========================================================
-// 4. INISIALISASI GRAFIK 2 (SCATTER PLOT)
+// 4. GRAFIK 2 (SCATTER PLOT)
 // =========================================================
 const ctx2 = document.getElementById('scatterChart')?.getContext('2d');
 let scatterChart = null;
@@ -104,7 +118,7 @@ if (ctx2) {
                 data: [],
                 backgroundColor: '#0891b2',
                 borderColor: '#0e7490',
-                pointRadius: 3.5,
+                pointRadius: 3,
                 showLine: false
             }]
         },
@@ -128,20 +142,19 @@ if (ctx2) {
 }
 
 // =========================================================
-// 5. UPDATE POP-UP DETAIL & KEDUA GRAFIK
+// 5. UPDATE PANEL & GRAFIK SAAT TITIK DIPILIH
 // =========================================================
-function updateDashboardSelection(props, latlng) {
-    if (!props) return;
+function updateDashboardSelection(row) {
+    if (!row) return;
 
-    // A. Ambil nilai atribut dari GeoJSON
-    const pointId = props.point_id || '-';
-    const kecamatan = props.kecamatan || '-';
-    const velocityVal = parseInSARValue(props.velocity);
-    
-    const lat = latlng ? latlng.lat.toFixed(5) : '-';
-    const lng = latlng ? latlng.lng.toFixed(5) : '-';
+    const pointIdRaw = getField(row, ['point_id', 'id']);
+    const pixelRaw = getField(row, ['pixel']);
+    const pointId = pointIdRaw || (pixelRaw !== undefined ? `Pixel ${pixelRaw}` : '-');
+    const kecamatan = getField(row, ['kecamatan']) || '-';
+    const velocityVal = getVel(row);
+    const lat = getLat(row).toFixed(5);
+    const lng = getLng(row).toFixed(5);
 
-    // B. Isi Nilai ke Elemen HTML (Sesuai ID di index.html)
     const floatingCard = document.getElementById('floating-card');
     if (floatingCard) floatingCard.classList.remove('hidden');
 
@@ -155,113 +168,153 @@ function updateDashboardSelection(props, latlng) {
     if (elemVelocity) elemVelocity.innerText = `${velocityVal} mm/tahun`;
     if (elemCoords) elemCoords.innerText = `${lat}, ${lng}`;
 
-    // C. Ambil Kolom Time Series (d_2016 s.d. d_2024)
-    const timeKeys = Object.keys(props).filter(k => k.startsWith('d_')).sort();
+    // Kolom time series: "d_20170103", "d_2016", atau "20170103"
+    const timeKeys = Object.keys(row)
+        .filter(k => /^d_/i.test(k.trim()) || /^\d{8}$/.test(k.trim()))
+        .sort();
 
-    // D. Update Grafik 1 (Line Chart)
     if (timeSeriesChart) {
-        const lineLabels = timeKeys.map(k => k.replace('d_', ''));
-        const lineValues = timeKeys.map(k => parseInSARValue(props[k]));
-
-        timeSeriesChart.data.labels = lineLabels;
-        timeSeriesChart.data.datasets[0].data = lineValues;
+        timeSeriesChart.data.labels = timeKeys.map(k => k.trim().replace(/^d_/i, ''));
+        timeSeriesChart.data.datasets[0].data = timeKeys.map(k => parseInSARValue(row[k]));
         timeSeriesChart.data.datasets[0].label = `Deformasi ${pointId} (mm)`;
         timeSeriesChart.update();
     }
 
-    // E. Update Grafik 2 (Scatter Plot InSAR)
     if (scatterChart) {
-        const scatterPoints = timeKeys.map((key, index) => ({
+        scatterChart.data.datasets[0].data = timeKeys.map((key, index) => ({
             x: index + 1,
-            y: parseInSARValue(props[key])
+            y: parseInSARValue(row[key])
         }));
-
-        scatterChart.data.datasets[0].data = scatterPoints;
         scatterChart.update();
     }
 }
 
 // =========================================================
-// 6. RENDER DATA PETA & FILTER KECAMATAN
+// 6. RENDER MARKER DI PETA
 // =========================================================
-function renderDashboardData(geojsonData) {
-    const features = geojsonData.features || [];
+let pointIndex = [];          // daftar titik untuk pencarian terdekat
+let selectedMarker = null;    // penanda kecil titik yang dipilih
 
-    // Update KPI Widget
+function renderDashboardData(data) {
     const totalPointsElem = document.getElementById('total-points');
     const avgVelocityElem = document.getElementById('avg-velocity');
 
-    if (totalPointsElem) totalPointsElem.innerText = features.length;
-    if (avgVelocityElem && features.length > 0) {
-        const avgVel = features.reduce((acc, cur) => acc + parseInSARValue(cur.properties.velocity), 0) / features.length;
+    if (totalPointsElem) totalPointsElem.innerText = data.length;
+    if (avgVelocityElem && data.length > 0) {
+        const avgVel = data.reduce((acc, cur) => acc + getVel(cur), 0) / data.length;
         avgVelocityElem.innerText = `${avgVel.toFixed(1)} mm/thn`;
     }
 
-    if (geojsonLayer) map.removeLayer(geojsonLayer);
+    // Tidak ada marker yang digambar, hanya index data untuk klik
+    pointIndex = [];
+    const bounds = L.latLngBounds();
 
-    // Buat Marker Peta
-    geojsonLayer = L.geoJSON(geojsonData, {
-        pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng, {
-                radius: 6,
-                fillColor: getColor(feature.properties.velocity),
-                color: "#ffffff",
-                weight: 1,
-                fillOpacity: 0.85
-            });
-        },
-        onEachFeature: function (feature, layer) {
-            layer.on('click', function (e) {
-                map.flyTo(e.latlng, 15, { animate: true, duration: 1 });
-                updateDashboardSelection(feature.properties, e.latlng);
-            });
-        }
-    }).addTo(map);
+    data.forEach(row => {
+        const lat = getLat(row);
+        const lng = getLng(row);
+        if (!isFinite(lat) || !isFinite(lng) || (lat === 0 && lng === 0)) return;
+        pointIndex.push({ lat, lng, row });
+        bounds.extend([lat, lng]);
+    });
 
-    // Auto-zoom ke cakupan area titik InSAR
-    if (geojsonLayer && geojsonLayer.getBounds().isValid()) {
-        map.fitBounds(geojsonLayer.getBounds(), { padding: [50, 50] });
-    }
+    console.log(`Titik valid: ${pointIndex.length} dari ${data.length} baris`);
+    if (bounds.isValid()) map.fitBounds(bounds, { padding: [50, 50] });
 }
 
 // =========================================================
-// 7. MEMUAT FILE GEOJSON
+// 7. SORTING
 // =========================================================
-fetch('data/subsidence_kulonprogo.geojson')
-    .then(response => {
-        if (!response.ok) throw new Error("Gagal membaca file GeoJSON");
-        return response.json();
-    })
-    .then(data => {
-        realGeoJSONData = data;
-        renderDashboardData(realGeoJSONData);
 
-        // Otomatis tampilkan info titik pertama
-        if (realGeoJSONData.features && realGeoJSONData.features.length > 0) {
-            const firstFeature = realGeoJSONData.features[0];
-            const coords = firstFeature.geometry.coordinates;
-            const latlng = L.latLng(coords[1], coords[0]);
-            updateDashboardSelection(firstFeature.properties, latlng);
+const MAX_CLICK_DIST_PX = 25;   // jarak maksimum klik ke titik terdekat (piksel layar)
+
+map.on('click', function (e) {
+    if (pointIndex.length === 0) return;
+
+    const clickPt = map.latLngToContainerPoint(e.latlng);
+    let best = null, bestDist = Infinity;
+
+    for (const p of pointIndex) {
+        const pt = map.latLngToContainerPoint([p.lat, p.lng]);
+        const d = Math.hypot(pt.x - clickPt.x, pt.y - clickPt.y);
+        if (d < bestDist) { bestDist = d; best = p; }
+    }
+
+    if (!best || bestDist > MAX_CLICK_DIST_PX) return;   // klik di luar area data
+
+    // Penanda kecil sementara supaya terlihat titik mana yang dipilih
+    if (selectedMarker) map.removeLayer(selectedMarker);
+    selectedMarker = L.circleMarker([best.lat, best.lng], {
+        radius: 6, color: '#000', weight: 2, fillOpacity: 0, interactive: false
+    }).addTo(map);
+
+    updateDashboardSelection(best.row);
+});
+// =========================================================
+// 8. SORTING
+// =========================================================
+function getSortedData(data, sortOrder) {
+    const dataCopy = [...data];
+    if (sortOrder === 'asc') {
+        return dataCopy.sort((a, b) => getVel(a) - getVel(b));
+    } else if (sortOrder === 'desc') {
+        return dataCopy.sort((a, b) => getVel(b) - getVel(a));
+    }
+    return dataCopy;
+}
+
+const sortSelect = document.getElementById('sort-select');
+if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+        const sortedData = getSortedData(rawCSVData, e.target.value);
+        renderDashboardData(sortedData);
+        if (sortedData.length > 0) {
+            updateDashboardSelection(sortedData[0]);
         }
-    })
-    .catch(err => {
-        console.error("❌ Error Data InSAR:", err.message);
     });
+}
 
 // =========================================================
-// 8. KONTROL INTERAKSI (TUTUP POP-UP & CONTROL PANEL)
+// 9. BACA CSV DENGAN PAPAPARSE
+// =========================================================
+Papa.parse('data/asc_timeseries.csv', {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    complete: function (results) {
+        rawCSVData = results.data;
+
+        // Debug: lihat struktur CSV di Console (F12)
+        console.log('Jumlah baris:', rawCSVData.length);
+        if (rawCSVData.length > 0) {
+            console.log('Nama kolom:', Object.keys(rawCSVData[0]));
+            console.log('Baris pertama:', rawCSVData[0]);
+        }
+        if (results.errors.length) console.warn('Parse errors:', results.errors);
+
+        const currentSort = sortSelect ? sortSelect.value : 'none';
+        const displayData = getSortedData(rawCSVData, currentSort);
+
+        renderDashboardData(displayData);
+
+        if (displayData.length > 0) {
+            updateDashboardSelection(displayData[0]);
+        }
+    },
+    error: function (err) {
+        console.error('❌ Error membaca CSV:', err);
+    }
+});
+
+// =========================================================
+// 10. KONTROL INTERAKSI
 // =========================================================
 const closeCardBtn = document.getElementById('close-card');
 if (closeCardBtn) {
     closeCardBtn.addEventListener('click', () => {
         document.getElementById('floating-card')?.classList.add('hidden');
-        if (geojsonLayer && geojsonLayer.getBounds().isValid()) {
-            map.fitBounds(geojsonLayer.getBounds(), { padding: [50, 50] });
-        }
     });
 }
 
-// Control Panel Toggle (Minimize/Maximize)
 const toggleControlBtn = document.getElementById('toggle-control-btn');
 const controlBody = document.getElementById('control-body');
 if (toggleControlBtn && controlBody) {
@@ -275,3 +328,30 @@ if (toggleControlBtn && controlBody) {
         }
     });
 }
+
+fetch('data/UD.tif')
+    .then(r => r.arrayBuffer())
+    .then(buf => parseGeoraster(buf))
+    .then(georaster => {
+        const min = georaster.mins[0], max = georaster.maxs[0];
+        const absMax = Math.max(Math.abs(min), Math.abs(max));
+
+        const tifLayer = new GeoRasterLayer({
+            georaster,
+            opacity: 0.7,
+            resolution: 256,
+            pixelValuesToColorFn: values => {
+                const v = values[0];
+                if (v === null || isNaN(v) || v === georaster.noDataValue) return null;
+                const t = (v + absMax) / (2 * absMax);          // 0..1
+                // biru (turun) - putih - merah (naik); balik jika perlu
+                const r = Math.round(255 * Math.min(1, t * 2));
+                const b = Math.round(255 * Math.min(1, (1 - t) * 2));
+                const g = Math.round(255 * (1 - Math.abs(t - 0.5) * 2));
+                return `rgb(${r},${g},${b})`;
+            }
+        });
+        tifLayer.addTo(map);
+        tifLayer.bringToBack();
+    })
+    .catch(err => console.error('Gagal memuat TIF:', err));
