@@ -369,3 +369,27 @@ html, body {
     display: block !important;
     margin-top: 4px !important;
 }
+
+#layer-list {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+}
+
+.layer-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.layer-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
