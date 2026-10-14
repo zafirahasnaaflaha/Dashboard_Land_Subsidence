@@ -349,4 +349,23 @@ html, body {
 .btn-gps:active {
     transform: scale(0.98);
 }
+.leaflet-top.leaflet-left .leaflet-control,
+.georaster-layer-legend,
+.legend {
+    background: #ffffff !important;
+    padding: 8px 12px !important;
+    border-radius: 10px !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+    max-width: 200px !important;
+    height: auto !important; /* Mencegah kotak melar panjang ke bawah */
+    overflow: hidden !important;
+}
 
+.leaflet-top.leaflet-left img,
+.georaster-layer-legend img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin-top: 4px !important;
+}
