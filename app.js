@@ -480,6 +480,98 @@ map.getPane('tifPane').style.pointerEvents = 'none';
     })
     .catch(err => console.error('Gagal memuat TIF:', err));
 
+// =========================================================
+// 11B. LAYER RASTER DENSITY (TAMBAHAN)
+// =========================================================
+if (!map.getPane('densityPane')) {
+    map.createPane('densityPane');
+    map.getPane('densityPane').style.zIndex = 310;
+}
+map.getPane('densityPane').style.pointerEvents = 'none';
+
+const DENSITY_STOPS = [
+    [255, 255, 204],
+    [254, 217, 118],
+    [253, 141, 60],
+    [227, 26, 28],
+    [128, 0, 38],
+    [61, 0, 80]
+];
+
+function densityToColor(v, min, max) {
+    const t = Math.min(1, Math.max(0, (v - min) / ((max - min) || 1)));
+    const pos = t * (DENSITY_STOPS.length - 1);
+    const i = Math.floor(pos);
+    const f = pos - i;
+    const a = DENSITY_STOPS[i];
+    const b = DENSITY_STOPS[Math.min(i + 1, DENSITY_STOPS.length - 1)];
+    const rgb = a.map((c, k) => Math.round(c + (b[k] - c) * f));
+    return `rgb(${rgb.join(',')})`;
+}
+
+let densityLayer = null;
+let densityLegend = null;
+
+fetch('data/Density.tif')
+    .then(r => {
+        if (!r.ok) throw new Error('Density.tif tidak ditemukan: HTTP ' + r.status);
+        return r.arrayBuffer();
+    })
+    .then(buf => parseGeoraster(buf))
+    .then(georaster => {
+        const min = georaster.mins[0];
+        const max = georaster.maxs[0];
+
+        console.log('Density.tif:', {
+            projection: georaster.projection,
+            size: [georaster.width, georaster.height],
+            nodata: georaster.noDataValue,
+            min, max
+        });
+
+        densityLayer = new GeoRasterLayer({
+            georaster,
+            opacity: 0.7,
+            resolution: 256,
+            pane: 'densityPane',
+            pixelValuesToColorFn: values => {
+                const v = values[0];
+                if (v === undefined || v === null || !isFinite(v)) return null;
+                if (georaster.noDataValue !== undefined && v === georaster.noDataValue) return null;
+                return densityToColor(v, min, max);
+            }
+        });
+
+        densityLegend = L.control({ position: 'bottomleft' });
+        densityLegend.onAdd = function () {
+            const div = L.DomUtil.create('div');
+            div.style.cssText = 'padding:10px 12px; font-size:12px; margin-bottom:95px; background:#fff; border-radius:8px; box-shadow:0 1px 5px rgba(0,0,0,.3);';
+            const grad = DENSITY_STOPS.map(c => `rgb(${c.join(',')})`).join(',');
+            div.innerHTML = `
+                <strong>Density</strong>
+                <div style="height:10px; width:160px; margin:6px 0; background:linear-gradient(to right,${grad});"></div>
+                <div style="display:flex; justify-content:space-between;">
+                    <span>${min.toFixed(1)}</span><span>${max.toFixed(1)}</span>
+                </div>`;
+            return div;
+        };
+    })
+    .catch(err => console.error('Gagal memuat Density.tif:', err));
+
+document.getElementById('density-toggle')?.addEventListener('change', e => {
+    if (!densityLayer) return;
+    if (e.target.checked) {
+        densityLayer.addTo(map);
+        densityLegend?.addTo(map);
+    } else {
+        map.removeLayer(densityLayer);
+        densityLegend?.remove();
+    }
+});
+
+document.getElementById('density-opacity')?.addEventListener('input', e => {
+    if (densityLayer) densityLayer.setOpacity(parseFloat(e.target.value));
+});
 
 // =========================================================
 // 12. LAYER BATAS DESA (GEOJSON)
