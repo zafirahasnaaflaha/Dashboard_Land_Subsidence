@@ -517,87 +517,84 @@ let userAccuracyCircle = null;
 
 const locateBtn = document.getElementById('locate-btn');
 
-if (locateBtn) {
-    locateBtn.addEventListener('click', () => {
-        if (!navigator.geolocation) {
-            alert('Browser Anda tidak mendukung fitur Geolocation / GPS.');
-            return;
-        }
+function getUserLocation() {
+    if (!navigator.geolocation) {
+        alert('Browser Anda tidak mendukung fitur Geolocation / GPS.');
+        return;
+    }
 
+    if (locateBtn) {
         locateBtn.innerHTML = '⌛ Mencari lokasi...';
         locateBtn.disabled = true;
+    }
 
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                const lat = position.coords.latitude;
-                const lng = position.coords.longitude;
-                const accuracy = position.coords.accuracy; // Akurasi dalam meter
+    navigator.geolocation.getCurrentPosition(
+        (position) => {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            const accuracy = position.coords.accuracy;
 
-                // Hapus marker & lingkaran posisi sebelumnya jika ada
-                if (userLocationMarker) map.removeLayer(userLocationMarker);
-                if (userAccuracyCircle) map.removeLayer(userAccuracyCircle);
+            // Hapus marker & lingkaran posisi sebelumnya jika ada
+            if (userLocationMarker) map.removeLayer(userLocationMarker);
+            if (userAccuracyCircle) map.removeLayer(userAccuracyCircle);
 
-                // 1. Buat Lingkaran Akurasi GPS
-                userAccuracyCircle = L.circle([lat, lng], {
-                    radius: accuracy,
-                    color: '#2563eb',
-                    fillColor: '#3b82f6',
-                    fillOpacity: 0.15,
-                    weight: 1
-                }).addTo(map);
+            // 1. Buat Lingkaran Akurasi GPS
+            userAccuracyCircle = L.circle([lat, lng], {
+                radius: accuracy,
+                color: '#2563eb',
+                fillColor: '#3b82f6',
+                fillOpacity: 0.15,
+                weight: 1
+            }).addTo(map);
 
-                // 2. Buat Marker Titik Lokasi Pengguna
-                userLocationMarker = L.circleMarker([lat, lng], {
-                    radius: 8,
-                    color: '#ffffff',
-                    fillColor: '#2563eb',
-                    fillOpacity: 1,
-                    weight: 3
-                }).addTo(map);
+            // 2. Buat Marker Titik Lokasi Pengguna
+            userLocationMarker = L.circleMarker([lat, lng], {
+                radius: 8,
+                color: '#ffffff',
+                fillColor: '#2563eb',
+                fillOpacity: 1,
+                weight: 3
+            }).addTo(map);
 
-                userLocationMarker.bindPopup(`
-                    <div style="font-size: 12px; text-align: center;">
-                        <b>📍 Lokasi Anda Saat Ini</b><br>
-                        Lat: ${lat.toFixed(5)}, Lng: ${lng.toFixed(5)}<br>
-                        <small style="color: #6b7280;">Akurasi: &plusmn;${Math.round(accuracy)} meter</small>
-                    </div>
-                `).openPopup();
+            userLocationMarker.bindPopup(`
+                <div style="font-size: 12px; text-align: center;">
+                    <b>📍 Lokasi Anda Saat Ini</b><br>
+                    Lat: ${lat.toFixed(5)}, Lng: ${lng.toFixed(5)}<br>
+                    <small style="color: #6b7280;">Akurasi: &plusmn;${Math.round(accuracy)} meter</small>
+                </div>
+            `).openPopup();
 
-                // 3. Zoom / Arahkan Peta ke Posisi Pengguna
-                map.flyTo([lat, lng], 15, { animate: true, duration: 1.5 });
+            // 3. Zoom / Arahkan Peta ke Posisi Pengguna
+            map.flyTo([lat, lng], 15, { animate: true, duration: 1.5 });
 
+            if (locateBtn) {
                 locateBtn.innerHTML = '📍 Lokasi Saya';
                 locateBtn.disabled = false;
-            },
-            (error) => {
-                locateBtn.innerHTML = '📍 Lokasi Saya';
-                locateBtn.disabled = false;
-
-                switch (error.code) {
-                    case error.PERMISSION_DENIED:
-                        alert('Izin akses lokasi ditolak oleh pengguna.');
-                        break;
-                    case error.POSITION_UNAVAILABLE:
-                        alert('Informasi lokasi tidak tersedia.');
-                        break;
-                    case error.TIMEOUT:
-                        alert('Waktu permintaan lokasi habis.');
-                        break;
-                    default:
-                        alert('Gagal mendapatkan lokasi terkini.');
-                }
-            },
-            {
-                enableHighAccuracy: true,
-                timeout: 10000,
-                maximumAge: 0
             }
-        );
-    });
+        },
+        (error) => {
+            if (locateBtn) {
+                locateBtn.innerHTML = '📍 Lokasi Saya';
+                locateBtn.disabled = false;
+            }
+
+            // Pesan error hanya jika dipemicu manual, agar tidak mengganggu jika lokasi ditolak saat baru buka web
+            console.warn('Gagal mendapatkan lokasi:', error.message);
+        },
+        {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+        }
+    );
 }
-// Pemicu otomatis saat web dibuka
+
+// 1. Jalankan pencarian lokasi secara otomatis saat halaman dibuka
+getUserLocation();
+
+// 2. Tetap jalankan fungsi saat tombol "Lokasi Saya" diklik manual
 if (locateBtn) {
-    locateBtn.click();
+    locateBtn.addEventListener('click', getUserLocation);
 }
 // =========================================================
 // EVENT LISTENER ZOOM KECAMATAN (TANPA FILTER)
