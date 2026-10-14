@@ -512,6 +512,19 @@ function densityToColor(v, min, max) {
 let densityLayer = null;
 let densityLegend = null;
 
+function applyDensity() {
+    if (!densityLayer) return;
+    const sel = document.getElementById('density-select');
+    const show = sel && sel.value === 'density';
+    if (show) {
+        if (!map.hasLayer(densityLayer)) densityLayer.addTo(map);
+        densityLegend?.addTo(map);
+    } else {
+        map.removeLayer(densityLayer);
+        densityLegend?.remove();
+    }
+}
+
 fetch('data/Density.tif')
     .then(r => {
         if (!r.ok) throw new Error('Density.tif tidak ditemukan: HTTP ' + r.status);
@@ -558,16 +571,7 @@ fetch('data/Density.tif')
     })
     .catch(err => console.error('Gagal memuat Density.tif:', err));
 
-document.getElementById('density-toggle')?.addEventListener('change', e => {
-    if (!densityLayer) return;
-    if (e.target.checked) {
-        densityLayer.addTo(map);
-        densityLegend?.addTo(map);
-    } else {
-        map.removeLayer(densityLayer);
-        densityLegend?.remove();
-    }
-});
+document.getElementById('density-select')?.addEventListener('change', applyDensity);
 
 document.getElementById('density-opacity')?.addEventListener('input', e => {
     if (densityLayer) densityLayer.setOpacity(parseFloat(e.target.value));
@@ -702,7 +706,7 @@ const normKec = s => (s || '').toString().toLowerCase()
 if (kecamatanSelect) {
     kecamatanSelect.addEventListener('change', (e) => {
         const selectedKec = e.target.value;
-        const isAll = !selectedKec || selectedKec === 'all' || selectedKec === 'Semua Kecamatan';
+        const isAll = !selectedKec || selectedKec === 'all' || selectedKec === 'ALL' || selectedKec === 'Semua Kecamatan';
         const target = normKec(selectedKec);
 
         const bounds = L.latLngBounds();
