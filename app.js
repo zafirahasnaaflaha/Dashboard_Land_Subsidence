@@ -509,7 +509,92 @@ fetch('data/admin_desa.geojson')
         console.log('Atribut contoh:', geojson.features[0]?.properties);
     })
     .catch(err => console.error('Gagal memuat GeoJSON:', err));
+// =========================================================
+// 13. FITUR LOKASI TERKINI (GPS GEOLOCATION)
+// =========================================================
+let userLocationMarker = null;
+let userAccuracyCircle = null;
 
+const locateBtn = document.getElementById('locate-btn');
+
+if (locateBtn) {
+    locateBtn.addEventListener('click', () => {
+        if (!navigator.geolocation) {
+            alert('Browser Anda tidak mendukung fitur Geolocation / GPS.');
+            return;
+        }
+
+        locateBtn.innerHTML = '⌛ Mencari lokasi...';
+        locateBtn.disabled = true;
+
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+                const accuracy = position.coords.accuracy; // Akurasi dalam meter
+
+                // Hapus marker & lingkaran posisi sebelumnya jika ada
+                if (userLocationMarker) map.removeLayer(userLocationMarker);
+                if (userAccuracyCircle) map.removeLayer(userAccuracyCircle);
+
+                // 1. Buat Lingkaran Akurasi GPS
+                userAccuracyCircle = L.circle([lat, lng], {
+                    radius: accuracy,
+                    color: '#2563eb',
+                    fillColor: '#3b82f6',
+                    fillOpacity: 0.15,
+                    weight: 1
+                }).addTo(map);
+
+                // 2. Buat Marker Titik Lokasi Pengguna
+                userLocationMarker = L.circleMarker([lat, lng], {
+                    radius: 8,
+                    color: '#ffffff',
+                    fillColor: '#2563eb',
+                    fillOpacity: 1,
+                    weight: 3
+                }).addTo(map);
+
+                userLocationMarker.bindPopup(`
+                    <div style="font-size: 12px; text-align: center;">
+                        <b>📍 Lokasi Anda Saat Ini</b><br>
+                        Lat: ${lat.toFixed(5)}, Lng: ${lng.toFixed(5)}<br>
+                        <small style="color: #6b7280;">Akurasi: &plusmn;${Math.round(accuracy)} meter</small>
+                    </div>
+                `).openPopup();
+
+                // 3. Zoom / Arahkan Peta ke Posisi Pengguna
+                map.flyTo([lat, lng], 15, { animate: true, duration: 1.5 });
+
+                locateBtn.innerHTML = '📍 Lokasi Saya';
+                locateBtn.disabled = false;
+            },
+            (error) => {
+                locateBtn.innerHTML = '📍 Lokasi Saya';
+                locateBtn.disabled = false;
+
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        alert('Izin akses lokasi ditolak oleh pengguna.');
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        alert('Informasi lokasi tidak tersedia.');
+                        break;
+                    case error.TIMEOUT:
+                        alert('Waktu permintaan lokasi habis.');
+                        break;
+                    default:
+                        alert('Gagal mendapatkan lokasi terkini.');
+                }
+            },
+            {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
+            }
+        );
+    });
+}
 // =========================================================
 // EVENT LISTENER ZOOM KECAMATAN (TANPA FILTER)
 // =========================================================
