@@ -324,3 +324,33 @@ html, body {
 .highlight {
     color: var(--danger-red);
 }
+/* --- STYLING TOMBOL GPS LOKASI TERKINI --- */
+.btn-gps {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-gps:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-gps:active {
+    transform: scale(0.98);
+}
+
+.btn-gps:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+}
