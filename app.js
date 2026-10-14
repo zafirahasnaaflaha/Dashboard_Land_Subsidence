@@ -595,6 +595,10 @@ if (locateBtn) {
         );
     });
 }
+// Pemicu otomatis saat web dibuka
+if (locateBtn) {
+    locateBtn.click();
+}
 // =========================================================
 // EVENT LISTENER ZOOM KECAMATAN (TANPA FILTER)
 // =========================================================
