@@ -481,15 +481,16 @@ map.getPane('tifPane').style.pointerEvents = 'none';
     .catch(err => console.error('Gagal memuat TIF:', err));
 
 // =========================================================
-// 11B. LAYER RASTER DENSITY (TAMBAHAN)
+// 11B. LAYER RASTER TAMBAHAN (CHECKBOX)
 // =========================================================
-if (!map.getPane('densityPane')) {
-    map.createPane('densityPane');
-    map.getPane('densityPane').style.zIndex = 310;
+if (!map.getPane('overlayPane2')) {
+    map.createPane('overlayPane2');
+    map.getPane('overlayPane2').style.zIndex = 310;
 }
-map.getPane('densityPane').style.pointerEvents = 'none';
+map.getPane('overlayPane2').style.pointerEvents = 'none';
 
-const DENSITY_STOPS = [
+// Skala warna (RGB). Bisa dipakai ulang untuk peta lain.
+const RAMP_DENSITY = [
     [255, 255, 204],
     [254, 217, 118],
     [253, 141, 60],
@@ -498,83 +499,134 @@ const DENSITY_STOPS = [
     [61, 0, 80]
 ];
 
-function densityToColor(v, min, max) {
+// ---------------------------------------------------------
+// DAFTAR PETA. Untuk menambah peta baru, tambahkan satu objek di sini.
+//   id   : unik, tanpa spasi
+//   name : teks yang tampil di checkbox
+//   url  : lokasi file di folder data
+//   ramp : skala warna
+//   min/max (opsional): rentang nilai tetap; jika dihilangkan, dipakai min/max raster
+// ---------------------------------------------------------
+const OVERLAY_LAYERS = [
+    { id: 'density', name: 'Density', url: 'data/Density.tif', ramp: RAMP_DENSITY }
+    // Contoh peta berikutnya:
+    // { id: 'peta2', name: 'Nama Peta 2', url: 'data/peta2.tif', ramp: RAMP_DENSITY, min: 0, max: 100 },
+];
+
+function rampColor(ramp, v, min, max) {
     const t = Math.min(1, Math.max(0, (v - min) / ((max - min) || 1)));
-    const pos = t * (DENSITY_STOPS.length - 1);
+    const pos = t * (ramp.length - 1);
     const i = Math.floor(pos);
     const f = pos - i;
-    const a = DENSITY_STOPS[i];
-    const b = DENSITY_STOPS[Math.min(i + 1, DENSITY_STOPS.length - 1)];
+    const a = ramp[i];
+    const b = ramp[Math.min(i + 1, ramp.length - 1)];
     const rgb = a.map((c, k) => Math.round(c + (b[k] - c) * f));
     return `rgb(${rgb.join(',')})`;
 }
 
-let densityLayer = null;
-let densityLegend = null;
+const overlayState = {};
+let overlayOpacity = 0.7;
 
-function applyDensity() {
-    if (!densityLayer) return;
-    const sel = document.getElementById('density-select');
-    const show = sel && sel.value === 'density';
-    if (show) {
-        if (!map.hasLayer(densityLayer)) densityLayer.addTo(map);
-        densityLegend?.addTo(map);
-    } else {
-        map.removeLayer(densityLayer);
-        densityLegend?.remove();
-    }
+function buildOverlayLegend(cfg, min, max) {
+    const legend = L.control({ position: 'bottomleft' });
+    legend.onAdd = function () {
+        const div = L.DomUtil.create('div');
+        div.style.cssText = 'padding:10px 12px; font-size:12px; background:#fff; border-radius:8px; box-shadow:0 1px 5px rgba(0,0,0,.3);';
+        const grad = cfg.ramp.map(c => `rgb(${c.join(',')})`).join(',');
+        div.innerHTML = `
+            <strong>${cfg.name}</strong>
+            <div style="height:10px; width:160px; margin:6px 0; background:linear-gradient(to right,${grad});"></div>
+            <div style="display:flex; justify-content:space-between;">
+                <span>${min.toFixed(1)}</span><span>${max.toFixed(1)}</span>
+            </div>`;
+        return div;
+    };
+    return legend;
 }
 
-fetch('data/Density.tif')
-    .then(r => {
-        if (!r.ok) throw new Error('Density.tif tidak ditemukan: HTTP ' + r.status);
-        return r.arrayBuffer();
-    })
-    .then(buf => parseGeoraster(buf))
-    .then(georaster => {
-        const min = georaster.mins[0];
-        const max = georaster.maxs[0];
+function toggleOverlay(cfg, checked, checkboxEl) {
+    const st = overlayState[cfg.id] || (overlayState[cfg.id] = {});
+    st.wanted = checked;
 
-        console.log('Density.tif:', {
-            projection: georaster.projection,
-            size: [georaster.width, georaster.height],
-            nodata: georaster.noDataValue,
-            min, max
-        });
+    // Matikan
+    if (!checked) {
+        if (st.layer) map.removeLayer(st.layer);
+        st.legend?.remove();
+        return;
+    }
 
-        densityLayer = new GeoRasterLayer({
-            georaster,
-            opacity: 0.7,
-            resolution: 256,
-            pane: 'densityPane',
-            pixelValuesToColorFn: values => {
-                const v = values[0];
-                if (v === undefined || v === null || !isFinite(v)) return null;
-                if (georaster.noDataValue !== undefined && v === georaster.noDataValue) return null;
-                return densityToColor(v, min, max);
+    // Sudah pernah dimuat
+    if (st.layer) {
+        st.layer.addTo(map);
+        st.legend?.addTo(map);
+        return;
+    }
+
+    // Sedang dimuat
+    if (st.loading) return;
+    st.loading = true;
+
+    fetch(cfg.url)
+        .then(r => {
+            if (!r.ok) throw new Error(cfg.url + ' tidak ditemukan: HTTP ' + r.status);
+            return r.arrayBuffer();
+        })
+        .then(buf => parseGeoraster(buf))
+        .then(georaster => {
+            const min = cfg.min !== undefined ? cfg.min : georaster.mins[0];
+            const max = cfg.max !== undefined ? cfg.max : georaster.maxs[0];
+
+            console.log(cfg.name + ':', {
+                projection: georaster.projection,
+                size: [georaster.width, georaster.height],
+                nodata: georaster.noDataValue,
+                min, max
+            });
+
+            st.layer = new GeoRasterLayer({
+                georaster,
+                opacity: overlayOpacity,
+                resolution: 256,
+                pane: 'overlayPane2',
+                pixelValuesToColorFn: values => {
+                    const v = values[0];
+                    if (v === undefined || v === null || !isFinite(v)) return null;
+                    if (georaster.noDataValue !== undefined && v === georaster.noDataValue) return null;
+                    return rampColor(cfg.ramp, v, min, max);
+                }
+            });
+            st.legend = buildOverlayLegend(cfg, min, max);
+            st.loading = false;
+
+            if (st.wanted) {
+                st.layer.addTo(map);
+                st.legend.addTo(map);
             }
+        })
+        .catch(err => {
+            st.loading = false;
+            st.wanted = false;
+            if (checkboxEl) checkboxEl.checked = false;
+            console.error('Gagal memuat ' + cfg.name + ':', err);
         });
+}
 
-        densityLegend = L.control({ position: 'bottomleft' });
-        densityLegend.onAdd = function () {
-            const div = L.DomUtil.create('div');
-            div.style.cssText = 'padding:10px 12px; font-size:12px; margin-bottom:95px; background:#fff; border-radius:8px; box-shadow:0 1px 5px rgba(0,0,0,.3);';
-            const grad = DENSITY_STOPS.map(c => `rgb(${c.join(',')})`).join(',');
-            div.innerHTML = `
-                <strong>Density</strong>
-                <div style="height:10px; width:160px; margin:6px 0; background:linear-gradient(to right,${grad});"></div>
-                <div style="display:flex; justify-content:space-between;">
-                    <span>${min.toFixed(1)}</span><span>${max.toFixed(1)}</span>
-                </div>`;
-            return div;
-        };
-    })
-    .catch(err => console.error('Gagal memuat Density.tif:', err));
+// Buat checkbox otomatis dari daftar di atas
+const layerListEl = document.getElementById('layer-list');
+OVERLAY_LAYERS.forEach(cfg => {
+    const label = document.createElement('label');
+    label.className = 'layer-item';
+    label.innerHTML = `<input type="checkbox" id="chk-${cfg.id}"><span>${cfg.name}</span>`;
+    layerListEl?.appendChild(label);
 
-document.getElementById('density-select')?.addEventListener('change', applyDensity);
+    const input = label.querySelector('input');
+    input.addEventListener('change', e => toggleOverlay(cfg, e.target.checked, input));
+});
 
-document.getElementById('density-opacity')?.addEventListener('input', e => {
-    if (densityLayer) densityLayer.setOpacity(parseFloat(e.target.value));
+// Slider opasitas untuk semua layer di daftar
+document.getElementById('layer-opacity')?.addEventListener('input', e => {
+    overlayOpacity = parseFloat(e.target.value);
+    Object.values(overlayState).forEach(st => st.layer && st.layer.setOpacity(overlayOpacity));
 });
 
 // =========================================================
