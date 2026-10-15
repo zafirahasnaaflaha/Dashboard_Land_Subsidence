@@ -82,46 +82,59 @@
         <main id="map-container">
             <div id="map"></div>
         
-            
-            <!-- Floating Control Panel (Sisi Kanan Atas) -->
-            <div id="control-widget" class="floating-widget">
+            <!-- Floating Control Panel Widget -->
+            <div class="floating-widget">
                 <div class="widget-header">
                     <span>⚙️ Control Panel</span>
-                    <button id="toggle-control-btn" title="Minimize/Maximize">&minus;</button>
+                    <button id="toggle-widget">−</button>
                 </div>
-                <div id="control-body" class="widget-body">
-                    <div class="form-group">
-                        <label for="kecamatan-select">Filter Kecamatan:</label>
-                        <select id="kecamatan-select">
-                            <option value="ALL">Semua Kecamatan</option>
-                            <option value="Temon">Temon (YIA Area)</option>
-                            <option value="Wates">Wates</option>
-                            <option value="Panjatan">Panjatan</option>
-                            <option value="Galur">Galur</option>
-                            <option value="Kokap">Kokap</option>
-                            <option value="Samigaluh">Samigaluh</option>
-                        </select>
-                    </div>
-
+                
+                <div class="widget-body" id="widget-body">
+                    <!-- Pilih Basemap -->
                     <div class="form-group">
                         <label for="basemap-select">Pilih Basemap:</label>
                         <select id="basemap-select">
                             <option value="carto-light">Carto Light (Clean)</option>
-                            <option value="satellite">Esri Satellite</option>
                             <option value="osm">OpenStreetMap</option>
+                            <option value="satellite">Esri Satellite</option>
                         </select>
                     </div>
-                    
+
+                    <!-- Custom Dropdown Multi-Select Data Pendukung -->
                     <div class="form-group">
-                        <div id="layer-list"></div>
-                        <label for="layer-opacity">Opasitas layer:</label>
-                        <input type="range" id="layer-opacity" min="0" max="1" step="0.05" value="0.7">
+                        <label>Data Pendukung:</label>
+                        <div class="custom-dropdown">
+                            <button type="button" class="dropdown-btn" id="dropdown-toggle">
+                                <span>Pilih Data Pendukung</span>
+                                <span class="arrow">▼</span>
+                            </button>
+                            
+                            <div class="dropdown-menu hidden" id="dropdown-menu">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="check-density" value="density">
+                                    <span>Density</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="check-curah-hujan"> Curah Hujan
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="check-bangunan" value="bangunan">
+                                    <span>Bangunan Kulprog</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    
-                        <button id="locate-btn" class="btn-gps">
-                            📍 Lokasi Saya
-                        </button>
+
+                    <!-- Slider Opasitas Layer -->
+                    <div class="form-group">
+                        <label for="opacity-slider">Opasitas layer:</label>
+                        <input type="range" id="opacity-slider" min="0" max="1" step="0.1" value="0.8">
                     </div>
+
+                    <!-- Tombol Lokasi Saya -->
+                    <button id="btn-gps" class="btn-gps">
+                        📍 Lokasi Saya
+                    </button>
                 </div>
             </div>
 

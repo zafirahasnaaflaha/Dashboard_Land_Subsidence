@@ -393,3 +393,71 @@ html, body {
     accent-color: #2563eb;
     cursor: pointer;
 }
+/* --- CUSTOM MULTI-SELECT DROPDOWN --- */
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-btn {
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #fcfdfe;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-btn .arrow {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    transition: transform 0.2s;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    margin-top: 4px;
+    padding: 6px;
+    z-index: 1010;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dropdown-menu.hidden {
+    display: none;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    font-size: 0.78rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.checkbox-item:hover {
+    background-color: var(--primary-soft);
+}
+
+.checkbox-item input[type="checkbox"] {
+    accent-color: var(--primary-green);
+    cursor: pointer;
+}

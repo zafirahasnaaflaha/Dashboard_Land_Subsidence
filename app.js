@@ -481,15 +481,23 @@ map.getPane('tifPane').style.pointerEvents = 'none';
     .catch(err => console.error('Gagal memuat TIF:', err));
 
 // =========================================================
-// 11B. LAYER RASTER TAMBAHAN (CHECKBOX)
+// 11B. LAYER RASTER TAMBAHAN (MULTI-PANE OVERLAY)
 // =========================================================
-if (!map.getPane('overlayPane2')) {
-    map.createPane('overlayPane2');
-    map.getPane('overlayPane2').style.zIndex = 310;
-}
-map.getPane('overlayPane2').style.pointerEvents = 'none';
 
-// Skala warna (RGB). Bisa dipakai ulang untuk peta lain.
+// 1. Helper untuk memastikan Pane tersedia di Leaflet
+function ensurePaneExists(paneName, zIndex) {
+    if (!map.getPane(paneName)) {
+        map.createPane(paneName);
+        map.getPane(paneName).style.zIndex = zIndex;
+        map.getPane(paneName).style.pointerEvents = 'none';
+    }
+}
+
+// Inisialisasi Pane Awal
+ensurePaneExists('densityPane', 400);
+ensurePaneExists('curahHujanPane', 500);
+
+// 2. Skala Warna (RAMP)
 const RAMP_DENSITY = [
     [255, 255, 204],
     [254, 217, 118],
@@ -499,20 +507,36 @@ const RAMP_DENSITY = [
     [61, 0, 80]
 ];
 
-// ---------------------------------------------------------
-// DAFTAR PETA. Untuk menambah peta baru, tambahkan satu objek di sini.
-//   id   : unik, tanpa spasi
-//   name : teks yang tampil di checkbox
-//   url  : lokasi file di folder data
-//   ramp : skala warna
-//   min/max (opsional): rentang nilai tetap; jika dihilangkan, dipakai min/max raster
-// ---------------------------------------------------------
-const OVERLAY_LAYERS = [
-    { id: 'density', name: 'Density', url: 'data/Density.tif', ramp: RAMP_DENSITY }
-    // Contoh peta berikutnya:
-    // { id: 'peta2', name: 'Nama Peta 2', url: 'data/peta2.tif', ramp: RAMP_DENSITY, min: 0, max: 100 },
+const RAMP_CURAH_HUJAN = [
+    [186, 230, 253],
+    [56, 189, 248],
+    [2, 132, 199],
+    [3, 105, 161],
+    [12, 74, 110]
 ];
 
+// 3. Konfigurasi Overlay Layers
+const OVERLAY_LAYERS = [
+    { 
+        id: 'density', 
+        name: 'Density', 
+        url: 'data/Density.tif', 
+        ramp: RAMP_DENSITY,
+        pane: 'densityPane'
+    },
+    { 
+        id: 'curah-hujan', 
+        name: 'Curah Hujan', 
+        url: 'data/CHIRPS_KulonProgo_2016_2022.tif', 
+        ramp: RAMP_CURAH_HUJAN,
+        pane: 'curahHujanPane'
+    }
+];
+
+const overlayState = {};
+let overlayOpacity = 0.6;
+
+// 4. Fungsi Interpolasi Warna (rampColor)
 function rampColor(ramp, v, min, max) {
     const t = Math.min(1, Math.max(0, (v - min) / ((max - min) || 1)));
     const pos = t * (ramp.length - 1);
@@ -524,139 +548,126 @@ function rampColor(ramp, v, min, max) {
     return `rgb(${rgb.join(',')})`;
 }
 
-const overlayState = {};
-let overlayOpacity = 0.7;
-
+// 5. Pembuat Legenda UI
 function buildOverlayLegend(cfg, min, max) {
     const legend = L.control({ position: 'bottomleft' });
     legend.onAdd = function () {
-        const div = L.DomUtil.create('div');
-        div.style.cssText = 'padding:10px 12px; font-size:12px; background:#fff; border-radius:8px; box-shadow:0 1px 5px rgba(0,0,0,.3);';
+        const div = L.DomUtil.create('div', 'info legend-overlay');
+        div.style.cssText = 'padding:10px 12px; font-size:12px; background:#fff; border-radius:8px; box-shadow:0 1px 5px rgba(0,0,0,.3); margin-bottom: 5px;';
         const grad = cfg.ramp.map(c => `rgb(${c.join(',')})`).join(',');
         div.innerHTML = `
             <strong>${cfg.name}</strong>
             <div style="height:10px; width:160px; margin:6px 0; background:linear-gradient(to right,${grad});"></div>
             <div style="display:flex; justify-content:space-between;">
-                <span>${min.toFixed(1)}</span><span>${max.toFixed(1)}</span>
+                <span>${Number(min).toFixed(1)}</span><span>${Number(max).toFixed(1)}</span>
             </div>`;
         return div;
     };
     return legend;
 }
 
+// 6. Fungsi Toggle Overlay Layer
 function toggleOverlay(cfg, checked, checkboxEl) {
     const st = overlayState[cfg.id] || (overlayState[cfg.id] = {});
     st.wanted = checked;
 
-    // Matikan
+    // Turn Off
     if (!checked) {
-        if (st.layer) map.removeLayer(st.layer);
-        st.legend?.remove();
+        if (st.layer && map.hasLayer(st.layer)) map.removeLayer(st.layer);
+        if (st.legend && typeof st.legend.remove === 'function') st.legend.remove();
         return;
     }
 
-    // Sudah pernah dimuat
+    // Turn On (jika sudah di-load)
     if (st.layer) {
-        st.layer.addTo(map);
-        st.legend?.addTo(map);
+        if (!map.hasLayer(st.layer)) st.layer.addTo(map);
+        if (st.legend && typeof st.legend.addTo === 'function' && !st.legend._map) {
+            st.legend.addTo(map);
+        }
         return;
     }
 
-    // Sedang dimuat
     if (st.loading) return;
     st.loading = true;
 
+    ensurePaneExists(cfg.pane, cfg.pane === 'curahHujanPane' ? 500 : 400);
+
     fetch(cfg.url)
         .then(r => {
-            if (!r.ok) throw new Error(cfg.url + ' tidak ditemukan: HTTP ' + r.status);
+            if (!r.ok) throw new Error(`${cfg.url} tidak ditemukan: HTTP ${r.status}`);
             return r.arrayBuffer();
         })
         .then(buf => parseGeoraster(buf))
         .then(georaster => {
-            const min = cfg.min !== undefined ? cfg.min : georaster.mins[0];
-            const max = cfg.max !== undefined ? cfg.max : georaster.maxs[0];
-
-            console.log(cfg.name + ':', {
-                projection: georaster.projection,
-                size: [georaster.width, georaster.height],
-                nodata: georaster.noDataValue,
-                min, max
-            });
+            const min = cfg.min !== undefined ? cfg.min : (georaster.mins[0] ?? 0);
+            const max = cfg.max !== undefined ? cfg.max : (georaster.maxs[0] ?? 100);
 
             st.layer = new GeoRasterLayer({
                 georaster,
                 opacity: overlayOpacity,
-                resolution: 256,
-                pane: 'overlayPane2',
+                resolution: cfg.id === 'curah-hujan' ? 32 : 64,
+                pane: cfg.pane,
                 pixelValuesToColorFn: values => {
-                    const v = values[0];
-                    if (v === undefined || v === null || !isFinite(v)) return null;
+                    let v = Array.isArray(values) ? values[0] : values;
+                    
+                    if (v === undefined || v === null || isNaN(v) || !isFinite(v)) return null;
                     if (georaster.noDataValue !== undefined && v === georaster.noDataValue) return null;
+                    if (v <= 0) return null;
+
                     return rampColor(cfg.ramp, v, min, max);
                 }
             });
+
             st.legend = buildOverlayLegend(cfg, min, max);
             st.loading = false;
 
             if (st.wanted) {
-                st.layer.addTo(map);
-                st.legend.addTo(map);
+                if (st.layer) st.layer.addTo(map);
+                if (st.legend && typeof st.legend.addTo === 'function') st.legend.addTo(map);
             }
         })
         .catch(err => {
             st.loading = false;
             st.wanted = false;
             if (checkboxEl) checkboxEl.checked = false;
-            console.error('Gagal memuat ' + cfg.name + ':', err);
+            console.error(`Gagal memuat [${cfg.name}]:`, err);
         });
 }
 
-// Buat checkbox otomatis dari daftar di atas
-const layerListEl = document.getElementById('layer-list');
-OVERLAY_LAYERS.forEach(cfg => {
-    const label = document.createElement('label');
-    label.className = 'layer-item';
-    label.innerHTML = `<input type="checkbox" id="chk-${cfg.id}"><span>${cfg.name}</span>`;
-    layerListEl?.appendChild(label);
-
-    const input = label.querySelector('input');
-    input.addEventListener('change', e => toggleOverlay(cfg, e.target.checked, input));
-});
-
-// Slider opasitas untuk semua layer di daftar
+// Slider Opasitas Layer
 document.getElementById('layer-opacity')?.addEventListener('input', e => {
     overlayOpacity = parseFloat(e.target.value);
     Object.values(overlayState).forEach(st => st.layer && st.layer.setOpacity(overlayOpacity));
 });
 
+// Fetch Data Bangunan Kulprog (GeoJSON)
+let bangunanLayer = null;
+fetch('data/Bangunan_KP_minified.geojson')
+    .then(r => r.ok ? r.json() : null)
+    .then(data => {
+        if (data) {
+            bangunanLayer = L.geoJSON(data, {
+                style: { color: '#f97316', weight: 1, fillOpacity: 0.5 }
+            });
+            console.log('Bangunan Kulprog berhasil dimuat');
+        }
+    })
+    .catch(err => console.warn('File data/Bangunan_KP_minified.geojson tidak ditemukan:', err));
+    
 // =========================================================
 // 12. LAYER BATAS DESA (GEOJSON)
 // =========================================================
-const desaStyle = {
-    color: '#1e293b',
-    weight: 1.2,
-    fillOpacity: 0          // tanpa isi, supaya raster tetap terlihat
-};
+const desaStyle = { color: '#1e293b', weight: 1.2, fillOpacity: 0 };
 
 fetch('data/admin_desa.geojson')
-    .then(r => {
-        if (!r.ok) throw new Error('GeoJSON tidak ditemukan: HTTP ' + r.status);
-        return r.json();
-    })
+    .then(r => r.ok ? r.json() : null)
     .then(geojson => {
-        const desaLayer = L.geoJSON(geojson, {
-            style: desaStyle,
-            interactive: false, // <-- MATIKAN INTERAKSI DI SINI
-            /*
-               Catatan: Efek hover (desaHover) dan Tooltip tidak akan berjalan 
-               karena interaksi pointer sudah dimatikan total.
-            */
-        }).addTo(map);
-
-        console.log('Batas desa ditambahkan:', geojson.features.length, 'fitur');
-        console.log('Atribut contoh:', geojson.features[0]?.properties);
+        if (geojson) {
+            L.geoJSON(geojson, { style: desaStyle, interactive: false }).addTo(map);
+            console.log('Batas desa berhasil dimuat');
+        }
     })
-    .catch(err => console.error('Gagal memuat GeoJSON:', err));
+    .catch(err => console.error('Gagal memuat GeoJSON desa:', err));
 // =========================================================
 // 13. FITUR LOKASI TERKINI (GPS GEOLOCATION)
 // =========================================================
@@ -783,3 +794,54 @@ if (kecamatanSelect) {
         }
     });
 }
+// ==========================================
+// LOGIKA CUSTOM MULTI-SELECT DROPDOWN DATA PENDUKUNG
+// ==========================================
+
+const dropdownToggle = document.getElementById('dropdown-toggle');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+// 1. Event listener untuk buka/tutup menu dropdown
+if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('hidden');
+    });
+
+    // Tutup dropdown otomatis jika mengklik area lain di luar widget
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.custom-dropdown')) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+}
+
+// 2. Event listener toggle checkbox untuk masing-masing layer
+document.getElementById('check-density')?.addEventListener('change', (e) => {
+    const densityCfg = OVERLAY_LAYERS.find(l => l.id === 'density');
+    if (densityCfg) {
+        toggleOverlay(densityCfg, e.target.checked, e.target);
+    }
+});
+
+// Checkbox Curah Hujan (Raster TIF CHIRPS)
+document.getElementById('check-curah-hujan')?.addEventListener('change', (e) => {
+    console.log("Status Checkbox Curah Hujan:", e.target.checked); // <-- TAMBAHKAN BARIS INI
+    const chCfg = OVERLAY_LAYERS.find(l => l.id === 'curah-hujan');
+    console.log("Konfigurasi ditemukan:", chCfg);                 // <-- TAMBAHKAN BARIS INI
+    if (chCfg) {
+        toggleOverlay(chCfg, e.target.checked, e.target);
+    } else {
+        console.error("Konfigurasi 'curah-hujan' tidak ditemukan di OVERLAY_LAYERS");
+    }
+});
+
+document.getElementById('check-bangunan')?.addEventListener('change', (e) => {
+    if (e.target.checked) {
+        // Panggil/tampilkan layer Bangunan Kulprog
+        if (typeof bangunanLayer !== 'undefined') map.addLayer(bangunanLayer);
+    } else {
+        // Sembunyikan layer Bangunan Kulprog
+        if (typeof bangunanLayer !== 'undefined') map.removeLayer(bangunanLayer);
+    }
+});
