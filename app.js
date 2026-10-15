@@ -527,7 +527,7 @@ const OVERLAY_LAYERS = [
     { 
         id: 'curah-hujan', 
         name: 'Curah Hujan', 
-        url: 'data/CHIRPS_KulonProgo_2016_2022.tif', 
+        url: 'data/ClipHujan.tif', 
         ramp: RAMP_CURAH_HUJAN,
         pane: 'curahHujanPane'
     }
