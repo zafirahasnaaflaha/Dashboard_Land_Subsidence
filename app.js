@@ -508,11 +508,13 @@ const RAMP_DENSITY = [
 ];
 
 const RAMP_CURAH_HUJAN = [
-    [186, 230, 253],
-    [56, 189, 248],
-    [2, 132, 199],
-    [3, 105, 161],
-    [12, 74, 110]
+    [254, 240, 217], 
+    [253, 204, 138], 
+    [161, 217, 155], 
+    [65, 182, 196],  
+    [34, 94, 168],   
+    [12, 44, 132],   
+    [77, 0, 75]      
 ];
 
 // 3. Konfigurasi Overlay Layers
@@ -538,7 +540,12 @@ let overlayOpacity = 0.6;
 
 // 4. Fungsi Interpolasi Warna (rampColor)
 function rampColor(ramp, v, min, max) {
-    const t = Math.min(1, Math.max(0, (v - min) / ((max - min) || 1)));
+    // Normalisasi nilai ke rentang 0 sampai 1
+    let t = Math.min(1, Math.max(0, (v - min) / ((max - min) || 1)));
+    
+    // Terapkan sedikit peregangan kontras non-linear (Gamma Stretch)
+    t = Math.pow(t, 0.85);
+
     const pos = t * (ramp.length - 1);
     const i = Math.floor(pos);
     const f = pos - i;
