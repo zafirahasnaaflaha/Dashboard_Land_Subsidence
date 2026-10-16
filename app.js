@@ -635,7 +635,7 @@ function toggleOverlay(cfg, checked, checkboxEl) {
 }
 
 // Slider Opasitas Layer
-document.getElementById('layer-opacity')?.addEventListener('input', e => {
+document.getElementById('opacity-slider')?.addEventListener('input', e => {
     overlayOpacity = parseFloat(e.target.value);
     Object.values(overlayState).forEach(st => st.layer && st.layer.setOpacity(overlayOpacity));
 });
