@@ -659,7 +659,7 @@ fetch('data/Bangunan_KP_minified.geojson')
 // =========================================================
 const desaStyle = { color: '#1e293b', weight: 1.2, fillOpacity: 0 };
 
-fetch('data/admin_desa.geojson')
+fetch('data/AdminKec_KP.geojson')
     .then(r => r.ok ? r.json() : null)
     .then(geojson => {
         if (geojson) {
