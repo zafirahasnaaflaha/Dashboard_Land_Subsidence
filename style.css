@@ -435,10 +435,13 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 4px;
+
+    max-height: 180px;
+    overflow-y: auto;
 }
 
 .dropdown-menu.hidden {
-    display: none;
+    display: none !important;
 }
 
 .checkbox-item {

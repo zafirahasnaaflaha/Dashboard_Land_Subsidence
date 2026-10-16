@@ -659,7 +659,7 @@ fetch('data/Bangunan_KP_minified.geojson')
 // =========================================================
 const desaStyle = { color: '#1e293b', weight: 1.2, fillOpacity: 0 };
 
-fetch('data/aAdminKec_KP.geojson')
+fetch('data/AdminKec_KP.geojson')
     .then(r => r.ok ? r.json() : null)
     .then(geojson => {
         if (geojson) {
@@ -844,4 +844,72 @@ document.getElementById('check-bangunan')?.addEventListener('change', (e) => {
         // Sembunyikan layer Bangunan Kulprog
         if (typeof bangunanLayer !== 'undefined') map.removeLayer(bangunanLayer);
     }
+});
+
+// Variable penampung layer bangunan aktif
+const buildingLayers = {};
+
+// LOGIKA TOGGLE DROPDOWN GLOBAL (Bisa untuk Data Pendukung & Kecamatan)
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.js-dropdown-btn');
+    
+    // Jika tombol dropdown diklik
+    if (btn) {
+        e.stopPropagation();
+        const container = btn.closest('.custom-dropdown');
+        const menu = container.querySelector('.js-dropdown-menu');
+
+        // Tutup dropdown lain yang sedang terbuka
+        document.querySelectorAll('.js-dropdown-menu').forEach(m => {
+            if (m !== menu) m.classList.add('hidden');
+        });
+
+        // Buka/Tutup menu yang diklik
+        menu.classList.toggle('hidden');
+        return;
+    }
+
+    // Tutup semua dropdown jika klik di luar box
+    if (!e.target.closest('.custom-dropdown')) {
+        document.querySelectorAll('.js-dropdown-menu').forEach(menu => {
+            menu.classList.add('hidden');
+        });
+    }
+});
+
+// HANDLER LOAD GEOJSON BANGUNAN KECAMATAN
+document.querySelectorAll('.building-checkbox').forEach(checkbox => {
+    checkbox.addEventListener('change', function(e) {
+        const kec = e.target.value;
+        const isChecked = e.target.checked;
+
+        if (isChecked) {
+            fetch(`data/bangunan/${kec}.geojson`)
+                .then(res => {
+                    if (!res.ok) throw new Error(`File ${kec}.geojson tidak ditemukan`);
+                    return res.json();
+                })
+                .then(geojson => {
+                    buildingLayers[kec] = L.geoJSON(geojson, {
+                        style: {
+                            color: '#e11d48',
+                            weight: 0.8,
+                            fillColor: '#f43f5e',
+                            fillOpacity: 0.6
+                        },
+                        interactive: false
+                    }).addTo(map);
+                })
+                .catch(err => {
+                    console.error(err);
+                    alert(`Data bangunan kecamatan ${kec} belum tersedia.`);
+                    e.target.checked = false;
+                });
+        } else {
+            if (buildingLayers[kec]) {
+                map.removeLayer(buildingLayers[kec]);
+                delete buildingLayers[kec];
+            }
+        }
+    });
 });
