@@ -21,7 +21,7 @@ function getField(row, names) {
 
 const getLat = row => parseInSARValue(getField(row, ['latitude', 'lat', 'y']));
 const getLng = row => parseInSARValue(getField(row, ['longitude', 'lon', 'lng', 'long', 'x']));
-const getVel = row => parseInSARValue(getField(row, ['velocity', 'vel', 'v']));
+const getVel = row => parseInSARValue(getField(row, ['velocity', 'vel_up', 'v']));
 
 // Warna Marker berdasarkan Kecepatan (Velocity)
 function getColor(velocity) {
@@ -355,7 +355,7 @@ if (sortSelect) {
 // =========================================================
 // 9. BACA CSV DENGAN PAPAPARSE
 // =========================================================
-Papa.parse('data/dsc_timeseries.csv', {
+Papa.parse('data/decomp_timeseries_up.csv', {
     download: true,
     header: true,
     skipEmptyLines: true,
